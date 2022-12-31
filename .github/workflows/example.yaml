@@ -1,0 +1,22 @@
+name: Example
+
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  call:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Set up Carboni
+        uses: akromio/setup-carboni@v1
+      
+      - name: Check installation
+        run: carboni -v

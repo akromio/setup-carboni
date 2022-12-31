@@ -1,0 +1,14 @@
+name: setup-carboni
+description: This action sets up Carboni.
+author: Sia Codelabs
+
+branding:
+  icon: download
+  color: gray-dark
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Carboni
+      shell: bash
+      run: npm i -g @akromio/carboni
